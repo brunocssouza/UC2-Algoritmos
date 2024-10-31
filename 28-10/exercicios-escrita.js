@@ -34,3 +34,11 @@ e) Remova da lista a tarefa que o usuário escolheu.
 
 f) Imprima o array no console
 **/
+const readline = require('readline-sync');
+
+const listaDeTarefas = [];
+let tarefa1 = readline.question("Digite uma tarefa 1: ")
+let tarefa2 = readline.question("Digite uma tarefa 2: ")
+let tarefa3 = readline.question("Digite uma tarefa 3: ")
+
+
