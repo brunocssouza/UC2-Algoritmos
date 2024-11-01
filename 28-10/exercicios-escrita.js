@@ -44,7 +44,7 @@ for (let contador = 1; contador <= 3; contador++) {
 // c) Imprima o array no console.
 console.log(listaDeTarefas);
 
-// d) & e) Peça ao usuário que digite o número de uma tarefa que ele já realizou: 1, 2 ou 3 e remova=o da lista de tarefas.
+// d) & e) Peça ao usuário que digite o número de uma tarefa que ele já realizou: 1, 2 ou 3 e remova-o da lista de tarefas.
 listaDeTarefas.splice(readline.questionInt("Digite o numero de uma tarefa que ja foi realizada: ")-1, 1);
 
 // f) Imprima o array no console.
