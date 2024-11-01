@@ -9,7 +9,7 @@ console.log('b. ', array) // Output: b. null
 
 // 3.
 array = [3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13]
-console.log('c. ', array.length) // Output: a. 11
+console.log('c. ', array.length) // Output: c. 11
 
 // 4.
 let i = 0
