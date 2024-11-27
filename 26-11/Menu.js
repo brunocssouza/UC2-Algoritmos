@@ -91,7 +91,7 @@ function addPokemon() {
 
 function showBag() {
     console.log("============================================");
-    console.log("Pokémons na mochila:\n");
+    console.log("Pokémons na mochila: \n");
     for (let i=0; i < pokemonBag.length; i++) {     /* Mostra os atuais pokémons em sua bag */
         console.log(`${i+1}. ${pokemonBag[i].name} - Tipo: ${pokemonBag[i].tipo}, Nível: ${pokemonBag[i].nivel}`);
     };
