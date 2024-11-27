@@ -2,103 +2,148 @@ const readline = require('readline-sync');
 
 let pokemons = [
     [
-        {name: 'Jolteon', tipo: 'eletrico', nivel: 5, geracao: 1},
-        {name: 'Pikachu', tipo: 'eletrico', nivel: 10, geracao: 1},
-        {name: 'Mareep', tipo: 'eletrico', nivel: 10, geracao: 2},
-        {name: 'Amphrus', tipo: 'eletrico', nivel: 10, geracao: 2},
-        {name: 'Manectric', tipo: 'eletrico', nivel: 10, geracao: 3},
-        {name: 'Minun', tipo: 'eletrico', nivel: 10, geracao: 3}
+    {name: 'Jolteon', tipo: 'Eletrico', nivel: 5, geracao: 1},
+    {name: 'Pikachu', tipo: 'Eletrico', nivel: 10, geracao: 1},
+    {name: 'Mareep', tipo: 'Eletrico', nivel: 15, geracao: 2},
+    {name: 'Amphrus', tipo: 'Eletrico', nivel: 20, geracao: 2},
+    {name: 'Manectric', tipo: 'Eletrico', nivel: 25, geracao: 3},
+    {name: 'Minun', tipo: 'Eletrico', nivel: 30, geracao: 3}
     ], [
-        {name: 'Charizard', tipo: 'fogo', nivel: 5, geracao: 1},
-        {name: 'Rapidash', tipo: 'fogo', nivel: 10, geracao: 1},
-        {name: 'Magcargo', tipo: 'fogo', nivel: 10, geracao: 2},
-        {name: 'Typlhosion', tipo: 'fogo', nivel: 10, geracao: 2},
-        {name: 'Camerupt', tipo: 'fogo', nivel: 10, geracao: 3},
-        {name: 'Blaziken', tipo: 'fogo', nivel: 10, geracao: 3}
-    
+    {name: 'Charizard', tipo: 'Fogo', nivel: 5, geracao: 1},
+    {name: 'Rapidash', tipo: 'Fogo', nivel: 10, geracao: 1},
+    {name: 'Magcargo', tipo: 'Fogo', nivel: 15, geracao: 2},
+    {name: 'Typlhosion', tipo: 'Fogo', nivel: 20, geracao: 2},
+    {name: 'Camerupt', tipo: 'Fogo', nivel: 25, geracao: 3},
+    {name: 'Blaziken', tipo: 'Fogo', nivel: 30, geracao: 3}
     ], [
-        {name: 'Blastoise', tipo: 'agua', nivel: 5, geracao: 1},
-        {name: 'Golduck', tipo: 'agua', nivel: 10, geracao: 1},
-        {name: 'Feraligatr', tipo: 'agua', nivel: 10, geracao: 2},
-        {name: 'Laturn', tipo: 'agua', nivel: 10, geracao: 2},
-        {name: 'Swampert', tipo: 'agua', nivel: 10, geracao: 3},
-        {name: 'Milostic', tipo: 'agua', nivel: 10, geracao: 3}
+    {name: 'Blastoise', tipo: 'Agua', nivel: 5, geracao: 1},
+    {name: 'Golduck', tipo: 'Agua', nivel: 10, geracao: 1},
+    {name: 'Feraligatr', tipo: 'Agua', nivel: 15, geracao: 2},
+    {name: 'Laturn', tipo: 'Agua', nivel: 20, geracao: 2},
+    {name: 'Swampert', tipo: 'Agua', nivel: 25, geracao: 3},
+    {name: 'Milostic', tipo: 'Agua', nivel: 30, geracao: 3}
     ], [
-        {name: 'Venusaur', tipo: 'planta', nivel: 5, geracao: 1},
-        {name: 'Vileplume', tipo: 'planta', nivel: 10, geracao: 1},
-        {name: 'Hoppip', tipo: 'planta', nivel: 10, geracao: 2},
-        {name: 'Meganium', tipo: 'planta', nivel: 10, geracao: 2},
-        {name: 'Sceptile', tipo: 'planta', nivel: 10, geracao: 3},
-        {name: 'Seedot', tipo: 'planta', nivel: 10, geracao: 3}
+    {name: 'Venusaur', tipo: 'Planta', nivel: 5, geracao: 1},
+    {name: 'Vileplume', tipo: 'Planta', nivel: 10, geracao: 1},
+    {name: 'Hoppip', tipo: 'Planta', nivel: 15, geracao: 2},
+    {name: 'Meganium', tipo: 'Planta', nivel: 20, geracao: 2},
+    {name: 'Sceptile', tipo: 'Planta', nivel: 25, geracao: 3},
+    {name: 'Seedot', tipo: 'Planta', nivel: 30, geracao: 3}
     ], [
-        {name: 'Snorlax', tipo: 'normal', nivel: 5, geracao: 1},
-        {name: 'Eevee', tipo: 'normal', nivel: 10, geracao: 1},
-        {name: 'Furret', tipo: 'normal', nivel: 10, geracao: 2},
-        {name: 'Porigon²', tipo: 'normal', nivel: 10, geracao: 2},
-        {name: 'Slaking', tipo: 'normal', nivel: 10, geracao: 3},
-        {name: 'Exploud', tipo: 'normal', nivel: 10, geracao: 3}
+    {name: 'Snorlax', tipo: 'Normal', nivel: 5, geracao: 1},
+    {name: 'Eevee', tipo: 'Normal', nivel: 10, geracao: 1},
+    {name: 'Furret', tipo: 'Normal', nivel: 15, geracao: 2},
+    {name: 'Porigon²', tipo: 'Normal', nivel: 20, geracao: 2},
+    {name: 'Slaking', tipo: 'Normal', nivel: 25, geracao: 3},
+    {name: 'Exploud', tipo: 'Normal', nivel: 30, geracao: 3}
     ]
 ]
 
 
-console.log(pokemonsCerto)
+function addPokemon() {
+    console.log("============================================")
+    let tipoPokemon = readline.questionInt("Escolha o tipo do Pokemon: \n\n1. Eletrico \n2. Fogo \n3. Agua \n4. Planta \n5. Normal \n"); /* Usuario escolhe o tipo do Pokémon */
+    switch(tipoPokemon) {
+        case 1:
+            tipoPokemon = 'Eletrico';
+            break;
+        case 2:
+            tipoPokemon = 'Fogo';
+            break;
+        case 3:
+            tipoPokemon = 'Agua';
+            break;
+        case 4:
+            tipoPokemon = 'Planta';
+            break;
+        case 5:
+            tipoPokemon = 'Normal';
+            break;
+        default:
+            console.log("Comando desconhecido!");
+            break;
+    }
 
-let mochilaPokemon = [];
+    console.log("============================================")
+    let geracaoPokemon = readline.questionInt("Escolha a geracao do Pokemon: \n\n1. Primeira Geracao \n2. Segunda Geracao \n3. Terceira Geracao \n"); /* Usuario escolhe a geracão do Pokemon */
+
+    let possiveisPokemons = [];     /* Armazenar os pokémons com o tipo e geração requisitado em uma lista temporária */
+    for (let i=0; i < pokemons.length; i++) {
+        if (pokemons[i][0].tipo === tipoPokemon) {
+            for (let j=0; j < pokemons[i].length; j++) {
+                if (pokemons[i][j].geracao == geracaoPokemon) {
+                    possiveisPokemons.push(pokemons[i][j]);
+                };
+            };
+        };
+    };
+
+    console.log("============================================");     /* Mostra os elementos encontrados na lista temporária criada*/
+    console.log(`Pokémons da Geração ${geracaoPokemon} - Tipo ${tipoPokemon}: \n`);
+    for (let i=0; i < possiveisPokemons.length; i++) {
+        console.log(`${i+1}. ${possiveisPokemons[i].name} = Nível: ${possiveisPokemons[i].nivel} `);
+    };
+    let escolhaPokemon = readline.questionInt("\nDigite o numero do Pokemon que deseja: ");     /* Usuario escolhe, dentre os elementos encontrados na lista temporária criada, um pokémon para adicionar em sua bag*/
+    pokemonBag.push(possiveisPokemons[escolhaPokemon-1]);
+    console.log(`${possiveisPokemons[escolhaPokemon-1].name} adicionado á mochila com sucesso!`);
+};
+
+function showBag() {
+    console.log("============================================");
+    console.log("Pokémons na mochila:\n");
+    for (let i=0; i < pokemonBag.length; i++) {     /* Mostra os atuais pokémons em sua bag */
+        console.log(`${i+1}. ${pokemonBag[i].name} - Tipo: ${pokemonBag[i].tipo}, Nível: ${pokemonBag[i].nivel}`);
+    };
+};
+
+function removePokemon() {
+    console.log("============================================");
+    console.log("Pokémons atualmente em sua mochila: \n");
+    for (let i=0; i < pokemonBag.length; i++) {     /* Mostra os atuais pokémons em sua bag */
+        console.log(`${i+1}. ${pokemonBag[i].name} - Tipo: ${pokemonBag[i].tipo}, Nivel: ${pokemonBag[i].nivel}`)
+    };
+
+    let removePokemon = readline.questionInt(`\nDigite o numero do Pokemon que deseja remover: `);      
+    console.log(`${pokemonBag[removePokemon-1].name} removido com sucesso!`);   /* Remove o pokémon escolhido de sua bag */
+    pokemonBag.splice(removePokemon-1, 1);
+}
+
+
+let pokemonBag = [];
 
 function exibirMenu() {
     while (true) {
-        let option = readline.questionInt("Escolha uma opcao:\n1. Adicionar Pokemon na mochila\n2. Ver Pokemons na mochila\n3. Remover Pokemon da mochila\n4. Sair\n");
+        console.log("============================================")
+        let option = readline.questionInt("Escolha uma opcao: \n\n1. Adicionar Pokemon na mochila \n2. Ver Pokemons na mochila \n3. Remover Pokemon da mochila \n4. Sair \n");
         switch(option) {
             case 1:
-                if (mochilaPokemon.length < 6) { 
-                    let tipoPokemon = readline.questionInt("Escolha um tipo de Pokemon:\n1. Eletrico\n2. Fogo\n3. Agua\n4. Planta\n5. Normal\n"-1);
-                    switch(tipoPokemon) {
-                        case 1:
-                            tipoPokemon = 'eletrico';
-                        case 2:
-                            tipoPokemon = 'fogo';
-                            break;
-                        case 3:
-                            tipoPokemon = 'agua';
-                            break;
-                        case 4:
-                            tipoPokemon = 'planta';
-                            break;
-                        case 5:
-                            tipoPokemon = 'normal';
-                            break;
-                        default:
-                            break
-                    }
-                              
-                console.log(`Pokemons disponíveis resgatar: `)
-                for (let i=0; i < 1; i++) {
-                    console.log(`${pokemons[i]}`)
-                }
-
-                let addPokemon = readline.questionInt("Escolha um Pokemon para adicionar: \n1. Pikachu\n2. Charmander\n3. Bulbasaur\n4. Squirtle\n5. Eevee\n");
-                mochilaPokemon.push(pokemons[addPokemon-1]);
+                if (pokemonBag.length < 6) {
+                    addPokemon();
                 } else {
-                    console.log("Mochila Pokemon cheia!")
+                    console.log("Mochila Pokémon cheia!")
                 }
                 break;
+
             case 2:
-                console.log("Pokemons da mochila:")
-                for (let i=0; i < mochilaPokemon.length; i++) {
-                    console.log(`${i+1}. ${mochilaPokemon[i].name} - Tipo: ${mochilaPokemon[i].tipo}, Nivel: ${mochilaPokemon[i].nivel}`)
+                if (pokemonBag.length > 0) {
+                    showBag();
+                } else {
+                    console.log("Mochila Pokémon vazia!")
                 }
                 break;
+
             case 3:
-                console.log("Lista de Po")
-                for (let i=0; i < mochilaPokemon.length; i++) {
-                    console.log(`${i+1}. ${mochilaPokemon[i].name} - Tipo: ${mochilaPokemon[i].tipo}, Nivel: ${mochilaPokemon[i].nivel}`)
-                }
-                let removePokemon = readline.questionInt(`Escolha um Pokemon para remover: `);
-                mochilaPokemon.splice(removePokemon-1, 1);
+                if (pokemonBag.length > 0) {
+                    removePokemon();
+                } else {
+                    console.log("Mochila Pokémon vazia!")
+                };
                 break;
+
             case 4:
-                console.log("REMOCAO DE POKEMON DA MOCHILA")
+                console.log("Saindo...")
                 return;
+
             default:
                 console.log("Opcao Invalida!");
                 break;
