@@ -1,5 +1,46 @@
 const readline = require('readline-sync');
 
+let pokemons = [
+    [
+    {name: 'Jolteon', tipo: 'Eletrico', nivel: 5, geracao: 1},
+    {name: 'Pikachu', tipo: 'Eletrico', nivel: 10, geracao: 1},
+    {name: 'Mareep', tipo: 'Eletrico', nivel: 15, geracao: 2},
+    {name: 'Amphrus', tipo: 'Eletrico', nivel: 20, geracao: 2},
+    {name: 'Manectric', tipo: 'Eletrico', nivel: 25, geracao: 3},
+    {name: 'Minun', tipo: 'Eletrico', nivel: 30, geracao: 3}
+    ], [
+    {name: 'Charizard', tipo: 'Fogo', nivel: 5, geracao: 1},
+    {name: 'Rapidash', tipo: 'Fogo', nivel: 10, geracao: 1},
+    {name: 'Magcargo', tipo: 'Fogo', nivel: 15, geracao: 2},
+    {name: 'Typlhosion', tipo: 'Fogo', nivel: 20, geracao: 2},
+    {name: 'Camerupt', tipo: 'Fogo', nivel: 25, geracao: 3},
+    {name: 'Blaziken', tipo: 'Fogo', nivel: 30, geracao: 3}
+    ], [
+    {name: 'Blastoise', tipo: 'Agua', nivel: 5, geracao: 1},
+    {name: 'Golduck', tipo: 'Agua', nivel: 10, geracao: 1},
+    {name: 'Feraligatr', tipo: 'Agua', nivel: 15, geracao: 2},
+    {name: 'Laturn', tipo: 'Agua', nivel: 20, geracao: 2},
+    {name: 'Swampert', tipo: 'Agua', nivel: 25, geracao: 3},
+    {name: 'Milostic', tipo: 'Agua', nivel: 30, geracao: 3}
+    ], [
+    {name: 'Venusaur', tipo: 'Planta', nivel: 5, geracao: 1},
+    {name: 'Vileplume', tipo: 'Planta', nivel: 10, geracao: 1},
+    {name: 'Hoppip', tipo: 'Planta', nivel: 15, geracao: 2},
+    {name: 'Meganium', tipo: 'Planta', nivel: 20, geracao: 2},
+    {name: 'Sceptile', tipo: 'Planta', nivel: 25, geracao: 3},
+    {name: 'Seedot', tipo: 'Planta', nivel: 30, geracao: 3}
+    ], [
+    {name: 'Snorlax', tipo: 'Normal', nivel: 5, geracao: 1},
+    {name: 'Eevee', tipo: 'Normal', nivel: 10, geracao: 1},
+    {name: 'Furret', tipo: 'Normal', nivel: 15, geracao: 2},
+    {name: 'Porigon²', tipo: 'Normal', nivel: 20, geracao: 2},
+    {name: 'Slaking', tipo: 'Normal', nivel: 25, geracao: 3},
+    {name: 'Exploud', tipo: 'Normal', nivel: 30, geracao: 3}
+    ]
+]
+
+let pokemonBag = [];
+
 function addPokemon() {
     console.log("============================================")
     let tipoPokemon = readline.questionInt("Escolha o tipo do Pokemon: \n\n1. Eletrico \n2. Fogo \n3. Agua \n4. Planta \n5. Normal \n"); /* Usuario escolhe o tipo do Pokémon */
@@ -67,47 +108,6 @@ function removePokemon() {
     console.log(`${pokemonBag[removePokemon-1].name} removido com sucesso!`);   /* Remove o pokémon escolhido de sua bag */
     pokemonBag.splice(removePokemon-1, 1);
 }
-
-let pokemons = [
-    [
-    {name: 'Jolteon', tipo: 'Eletrico', nivel: 5, geracao: 1},
-    {name: 'Pikachu', tipo: 'Eletrico', nivel: 10, geracao: 1},
-    {name: 'Mareep', tipo: 'Eletrico', nivel: 15, geracao: 2},
-    {name: 'Amphrus', tipo: 'Eletrico', nivel: 20, geracao: 2},
-    {name: 'Manectric', tipo: 'Eletrico', nivel: 25, geracao: 3},
-    {name: 'Minun', tipo: 'Eletrico', nivel: 30, geracao: 3}
-    ], [
-    {name: 'Charizard', tipo: 'Fogo', nivel: 5, geracao: 1},
-    {name: 'Rapidash', tipo: 'Fogo', nivel: 10, geracao: 1},
-    {name: 'Magcargo', tipo: 'Fogo', nivel: 15, geracao: 2},
-    {name: 'Typlhosion', tipo: 'Fogo', nivel: 20, geracao: 2},
-    {name: 'Camerupt', tipo: 'Fogo', nivel: 25, geracao: 3},
-    {name: 'Blaziken', tipo: 'Fogo', nivel: 30, geracao: 3}
-    ], [
-    {name: 'Blastoise', tipo: 'Agua', nivel: 5, geracao: 1},
-    {name: 'Golduck', tipo: 'Agua', nivel: 10, geracao: 1},
-    {name: 'Feraligatr', tipo: 'Agua', nivel: 15, geracao: 2},
-    {name: 'Laturn', tipo: 'Agua', nivel: 20, geracao: 2},
-    {name: 'Swampert', tipo: 'Agua', nivel: 25, geracao: 3},
-    {name: 'Milostic', tipo: 'Agua', nivel: 30, geracao: 3}
-    ], [
-    {name: 'Venusaur', tipo: 'Planta', nivel: 5, geracao: 1},
-    {name: 'Vileplume', tipo: 'Planta', nivel: 10, geracao: 1},
-    {name: 'Hoppip', tipo: 'Planta', nivel: 15, geracao: 2},
-    {name: 'Meganium', tipo: 'Planta', nivel: 20, geracao: 2},
-    {name: 'Sceptile', tipo: 'Planta', nivel: 25, geracao: 3},
-    {name: 'Seedot', tipo: 'Planta', nivel: 30, geracao: 3}
-    ], [
-    {name: 'Snorlax', tipo: 'Normal', nivel: 5, geracao: 1},
-    {name: 'Eevee', tipo: 'Normal', nivel: 10, geracao: 1},
-    {name: 'Furret', tipo: 'Normal', nivel: 15, geracao: 2},
-    {name: 'Porigon²', tipo: 'Normal', nivel: 20, geracao: 2},
-    {name: 'Slaking', tipo: 'Normal', nivel: 25, geracao: 3},
-    {name: 'Exploud', tipo: 'Normal', nivel: 30, geracao: 3}
-    ]
-]
-
-let pokemonBag = [];
 
 function exibirMenu() {
     while (true) {
