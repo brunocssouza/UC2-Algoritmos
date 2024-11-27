@@ -104,7 +104,7 @@ function removePokemon() {
         console.log(`${i+1}. ${pokemonBag[i].name} - Tipo: ${pokemonBag[i].tipo}, Nivel: ${pokemonBag[i].nivel}`)
     };
 
-    let removePokemon = readline.questionInt(`\nDigite o numero do Pokemon que deseja remover: `);      
+    let removePokemon = readline.questionInt("\nDigite o numero do Pokemon que deseja remover: ");      
     console.log(`${pokemonBag[removePokemon-1].name} removido com sucesso!`);   /* Remove o pokémon escolhido de sua bag */
     pokemonBag.splice(removePokemon-1, 1);
 }
