@@ -1,6 +1,6 @@
 const readline = require('readline-sync');
 
-let pokemons = [
+const pokemons = [
     [
     {name: 'Jolteon', tipo: 'Eletrico', nivel: 5, geracao: 1},
     {name: 'Pikachu', tipo: 'Eletrico', nivel: 10, geracao: 1},
