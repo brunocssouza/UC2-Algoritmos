@@ -39,6 +39,7 @@ let pokemons = [
     ]
 ]
 
+let pokemonBag = [];
 
 function addPokemon() {
     console.log("============================================")
@@ -108,8 +109,6 @@ function removePokemon() {
     pokemonBag.splice(removePokemon-1, 1);
 }
 
-
-let pokemonBag = [];
 
 function exibirMenu() {
     while (true) {
