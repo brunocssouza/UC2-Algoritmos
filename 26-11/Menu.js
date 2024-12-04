@@ -62,11 +62,15 @@ function addPokemon() {
             break;
         default:
             console.log("Comando desconhecido!");
-            break;
+            return;
     }
 
     console.log("============================================")
     let geracaoPokemon = readline.questionInt("Escolha a geracao do Pokemon: \n\n1. Primeira Geracao \n2. Segunda Geracao \n3. Terceira Geracao \n"); /* Usuario escolhe a geracão do Pokemon */
+    if (geracaoPokemon <= 0 || geracaoPokemon >= 4) {
+        console.log("Comando desconhecido!")
+        return
+    };
 
     let possiveisPokemons = [];     /* Armazenar os pokémons com o tipo e geração requisitado em uma lista temporária */
     for (let i=0; i < pokemons.length; i++) {
@@ -85,8 +89,14 @@ function addPokemon() {
         console.log(`${i+1}. ${possiveisPokemons[i].name} = Nível: ${possiveisPokemons[i].nivel} `);
     };
     let escolhaPokemon = readline.questionInt("\nDigite o numero do Pokemon que deseja: ");     /* Usuario escolhe, dentre os elementos encontrados na lista temporária criada, um pokémon para adicionar em sua bag*/
-    pokemonBag.push(possiveisPokemons[escolhaPokemon-1]);
-    console.log(`${possiveisPokemons[escolhaPokemon-1].name} adicionado á mochila com sucesso!`);
+    if (possiveisPokemons[escolhaPokemon-1]) {
+        pokemonBag.push(possiveisPokemons[escolhaPokemon-1]);
+        console.log(`${possiveisPokemons[escolhaPokemon-1].name} adicionado á mochila com sucesso!`);
+    } else {
+        console.log("Comando desconhecido!");
+        return;
+    }
+
 };
 
 function showBag() {
