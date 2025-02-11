@@ -1,0 +1,25 @@
+body {
+    background-color: #212738;
+    color: white;
+    text-shadow: 0 0 48px #212738;
+
+    text-align: center;
+    font-family:'Franklin Gothic Medium', 'Arial Narrow', 'Arial', 'sans-serif';
+
+    margin: 60px; /* Remove margem padrão  */
+    padding: 20px; /* Adiciona um espaço interno (padding) na página. */
+}
+
+.title {
+    border-radius: 5px;
+    background-color: #D1D646;
+    padding: 10px;
+}
+
+.balance {
+    border-radius: 5px;
+    padding: 10px;
+    color: white;
+
+    background-color: #EDF2EF;
+}
