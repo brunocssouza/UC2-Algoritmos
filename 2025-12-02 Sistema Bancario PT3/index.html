@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="pt=BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sistema Bancário</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div class="title">
+        <h1  id="title">SISTEMA BANCÁRIO</h1>
+    </div>
+    <br>
+    <div class="balance">
+        <label form="valor"> Digite um valor: </label>
+        <input type="number" id="numeroRecebido" placeholder="Ex: 100.00">
+        <br>
+        <br>
+        <button class="withdrawButton" onclick="withdraw()">Sacar</button>
+        <button class="depositButton" onclick="deposit()">Depositar</button>
+        <br>
+        <br>
+        Saldo: R$ <span id="saldo">0.00</span>
+    </div>
+
+    <script src="index.js"></script>
+
+</body>
+</html>
