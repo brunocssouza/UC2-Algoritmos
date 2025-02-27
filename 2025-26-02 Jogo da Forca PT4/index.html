@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jogo da Forca 😈</title>
+    <script src="script.js"></script>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <div class="container">
+        <h1>JOGO DA FORCA</h1>
+        <img id="imagemTopo" src="img/afraidPepe.jpg" alt="Afraid Pepe">
+
+        <div>
+            <h2 id="title">PALAVRA</h2>
+            <div id="secretWord">
+                brunin
+            </div>
+        </div>
+    
+        <div>
+            <h3 id="lettersAmount">
+                Número de letras: 0
+            </h3>
+        </div>
+    
+        <div>
+            <h3>
+                Tentativas restantes:
+                <span id="attemptAmount"></span>
+            </h3>
+        </div>
+    
+        <input id="input" type="text" maxlength="1" placeholder="Digite uma letra"/>
+        <button id="submitButton" onclick="checkLetter()">Guess!</button>
+    
+        <div>
+            <div id="rightGuess">
+                <p>VOCÊ ACERTOU!</p>
+                <img src="img/rightGuess.png" alt="Acertou!">
+            </div>
+            
+            <div id="wrongGuess">
+                <p>VOCÊ ERROU!</p>
+                <img src="img/wrongGuess.png" alt="Errou!">
+            </div>
+        </div>
+            
+
+            <button id="restartButton" onclick="restartGame()">Reiniciar Jogo</button>
+        </div>    
+    </div>
+
+
+
+    
+
+
+</body>
+</html>
