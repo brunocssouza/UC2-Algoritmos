@@ -1,0 +1,54 @@
+body {
+    background-color: #14213d;
+    font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    text-align: center;
+    font-size:1rem;
+}
+
+#main {
+    background-color: #ffffff;
+    margin-top: 5%;
+    max-width: 70%;
+    margin-left: auto;
+    margin-right: auto;
+    border-radius: 2rem;
+}
+
+#titulo {
+    border: solid white; 
+    background-color: #fca311; 
+    border-radius: 3rem;
+    font-size: 3rem;
+}
+
+#inputBar {
+    font-size:2rem;
+    width: 15rem;
+}
+
+
+#acertou img, #errou img {
+    width: 10rem;
+}
+#ganhou img {
+    width: 60rem;
+}
+#perdeu img{
+    width: 20rem;
+}
+
+
+button {
+    font-size: 2rem;
+    border: none;
+    border-radius: 5px;
+    background-color: #fca311;
+    transition: 0.1s;
+    -webkit-text-stroke: black 0.1rem;
+}
+button:hover {
+    background-color: #c97c00;
+}
+button:active {
+    background-color: #804f01;
+}
